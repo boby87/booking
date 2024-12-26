@@ -2,20 +2,16 @@ spring:
   application:
     name: "configserver"
   profiles:
-    # active: native
     active: git
   cloud:
     config:
       server:
-        # native:
-        # search-locations: "classpath:/config"
-        # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
           uri: "https://github.com/boby87/bookingConfigFiles"
           default-label: master
           timeout: 5
           username: "boby87"
-          password: "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"
+          password: GIT_PASSWORD
           clone-on-start: true
           force-pull: true
 
