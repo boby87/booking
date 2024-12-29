@@ -1,38 +1,43 @@
 package cm.ftg.bookingHouse.mapper;
 
 
-import java.util.List;
-
+import cm.ftg.bookingHouse.dto.HouseRequest;
 import cm.ftg.bookingHouse.dto.HouseDto;
-import cm.ftg.bookingHouse.entity.Addon;
 import cm.ftg.bookingHouse.entity.House;
+import cm.ftg.bookingHouse.entity.TypeHouse;
 
 public final class HouseMapper {
 
-    public static HouseDto mapToHouseDto(House house, List<Addon> addons) {
+    public static HouseDto mapToHouseDto(House house) {
         return new HouseDto(
+                house.getReference().toString(),
                 house.getDescription(),
                 house.isAvailable(),
                 house.isCategory(),
                 house.getPrice(),
                 house.getLocalisation(),
-                addons.stream().map(AddonMapper::mapToAddonDto).toList(),
+                house.getAddons().stream().map(AddonMapper::mapToAddonDto).toList(),
                 house.isState(),
                 house.getMobileNumber(),
                 house.getLength(),
-                house.getWidth());
+                house.getWidth(),
+                house.getImage(),
+                house.getType().getDescription());
+
     }
 
-    public static House mapToHouse(HouseDto houseDto) {
+    public static House mapToHouse(HouseDto houseRequest) {
         House house = new House();
-        house.setAvailable(houseDto.available());
-        house.setCategory(houseDto.category());
-        house.setDescription(houseDto.description());
-        house.setLocalisation(houseDto.Localisation());
-        house.setPrice(houseDto.price());
-        house.setLength(houseDto.length());
-        house.setMobileNumber(houseDto.mobileNumber());
-        house.setWidth(houseDto.width());
+        house.setAvailable(houseRequest.available());
+        house.setCategory(houseRequest.category());
+        house.setDescription(houseRequest.description());
+        house.setLocalisation(houseRequest.Localisation());
+        house.setPrice(houseRequest.price());
+        house.setLength(houseRequest.length());
+        house.setMobileNumber(houseRequest.mobileNumber());
+        house.setWidth(houseRequest.width());
+        house.setImage(houseRequest.image());
+        house.setType(TypeHouse.valueOf(houseRequest.typeHouse()));
         return house;
     }
 }

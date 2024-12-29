@@ -11,9 +11,14 @@ import java.util.List;
 )
 public record HouseDto(
 
+        @NotEmpty(message = "reference can not be a null or empty")
+        @Schema(
+                description = "reference of House", example = "FRTAYHEHVGD"
+        )
+        String reference,
         @NotEmpty(message = "description can not be a null or empty")
         @Schema(
-                description = "Account type of Eazy Bank account", example = "Savings"
+                description = "description  of house", example = "the house is newly built"
         )
         String description,
         boolean available,
@@ -48,5 +53,17 @@ public record HouseDto(
         @Schema(
                 description = "length of house",  example = "2.15"
         )
-        double width) {
+        double width,
+        @NotNull(message = "Image can not be a null or empty")
+        @Schema(
+                description = "image of house",  example = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+        )
+        String image,
+        @NotNull(message = "Type House can not be a null or empty")
+        @Schema(
+                description = "Type ofHouse",  example = "STUDIO"
+        )
+        String typeHouse
+
+        ) {
 }

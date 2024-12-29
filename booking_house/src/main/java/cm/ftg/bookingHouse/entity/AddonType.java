@@ -1,7 +1,5 @@
 package cm.ftg.bookingHouse.entity;
 
-import lombok.Getter;
-import lombok.Setter;
 
 public enum AddonType {
     BEDROOM(1, "Bedroom"),

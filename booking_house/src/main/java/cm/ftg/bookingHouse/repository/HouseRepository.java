@@ -8,4 +8,6 @@ import java.util.Optional;
 
 public interface HouseRepository extends JpaRepository<House, Long> {
     Optional<House> findByMobileNumber(String mobileNumber);
+    void deleteByMobileNumber(String mobileNumber);
+   // House updateByMobileNumber (String mobileNumber, House house);
 }

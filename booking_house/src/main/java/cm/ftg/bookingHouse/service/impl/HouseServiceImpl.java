@@ -1,6 +1,11 @@
 package cm.ftg.bookingHouse.service.impl;
 
+import cm.ftg.bookingHouse.dto.HouseRequest;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,8 +38,35 @@ public class HouseServiceImpl implements IHouseService {
 
     @Override
     public HouseDto findByMobileNumber(String mobileNumber) {
-        House house = houseRepository.findByMobileNumber(mobileNumber).orElseThrow(() -> new  ResourceNotFoundException("house","mobileNumber", mobileNumber));
-        var addon = addonRepository.findAllByHouse(house);
-        return HouseMapper.mapToHouseDto(house, addon);
+        House house = houseRepository.findByMobileNumber(mobileNumber)
+                .orElseThrow(() -> new  ResourceNotFoundException("house","mobileNumber", mobileNumber));
+        return HouseMapper.mapToHouseDto(house);
     }
+
+    @Override
+    public List<HouseDto> findAll() {
+        return houseRepository.findAll().stream().map(house -> HouseMapper.mapToHouseDto(house)).toList();
+    }
+
+    @Override
+    public void deleteByMobileNumber(String mobileNumber) {
+      houseRepository.deleteByMobileNumber(mobileNumber);
+
+    }
+
+    @Override
+    public void deleteAll() {
+       houseRepository.deleteAll();
+       addonRepository.deleteAll();
+    }
+
+    @Override
+    public HouseDto updateHouse(HouseRequest houseDto) {
+        House house = houseRepository.findByMobileNumber(houseDto.mobileNumber())
+                .orElseThrow(() -> new  ResourceNotFoundException("house","mobileNumber", houseDto.mobileNumber()));
+        BeanUtils.copyProperties(houseDto, house);
+        return HouseMapper.mapToHouseDto(house);
+    }
+
+
 }

@@ -2,6 +2,8 @@ package cm.ftg.bookingHouse.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +15,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
@@ -40,6 +43,9 @@ public class BaseEntity {
     private boolean state;
     private double length;
     private double width;
-    private  String reference;
+  //  @Column(columnDefinition = "uuid DEFAULT uuid_generate_v4()")
+    private UUID reference = UUID.randomUUID();
+    @Column(columnDefinition = "TEXT")
+    private String image;
 
 }
