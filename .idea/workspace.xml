@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c6628a4-3f15-4a08-8a33-365f6ccde3ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookingImage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/BookingHouseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/BookingHouseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/AddonType.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/AddonType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/HouseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/HouseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/HouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/HouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/IHouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/IHouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;boby87&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/boby87/booking.git&quot;,
+    &quot;accountId&quot;: &quot;a586a666-2c9c-4712-80aa-f4f204146f16&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2qndQJWqayJPVSO5HGF5EZocrq2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BookingHouseApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BookingImageApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.BookingHouseApplication">
+    <configuration name="BookingHouseApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cm.ftg.bookingHouse.BookingHouseApplication" />
+      <module name="bookingHouse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cm.ftg.bookingHouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingImageApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cm.ftg.bookingImage.BookingImageApplication" />
+      <module name="bookingImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cm.ftg.bookingImage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cm.ftg.eurekaServer.EurekaServerApplication" />
+      <module name="eurekaServer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cm.ftg.eurekaServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BookingHouseApplication" />
+        <item itemvalue="Application.BookingImageApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c6628a4-3f15-4a08-8a33-365f6ccde3ea" name="Changes" comment="" />
+      <created>1735302258602</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735302258602</updated>
+    </task>
+    <servers />
+  </component>
+</project>
