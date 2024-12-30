@@ -4,10 +4,12 @@ import java.util.List;
 
 import cm.ftg.bookingHouse.dto.HouseRequest;
 import cm.ftg.bookingHouse.dto.HouseDto;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface IHouseService {
 
-    void createHouse(HouseDto houseDto);
+    void createHouse(MultipartFile[] files, HouseRequest houseDto);
 
     HouseDto findByMobileNumber(String mobileNumber);
     

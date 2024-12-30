@@ -5,6 +5,8 @@ import cm.ftg.bookingHouse.dto.HouseRequest;
 import cm.ftg.bookingHouse.dto.HouseDto;
 import cm.ftg.bookingHouse.dto.ResponseDto;
 import cm.ftg.bookingHouse.service.IHouseService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -15,12 +17,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 @Tag(name = "CRUD REST APIs for Accounts in EazyBank", description = "CRUD REST APIs in EazyBank to CREATE, UPDATE, FETCH AND DELETE account details")
 @RestController
-@RequestMapping(path = "/api/house", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/house")
 @Validated
 public class HouseController {
     private final IHouseService iHouseService;
@@ -29,11 +32,22 @@ public class HouseController {
         this.iHouseService = iHouseService;
     }
 
-    @Operation(summary = "Create House REST API", description = "REST API to create new House &  Addon inside BookingHouse")
-    @ApiResponse(responseCode = "201", description = "HTTP Status CREATED")
-    @PostMapping("/create")
-    public ResponseEntity<ResponseDto> createAccount(@Valid @RequestBody HouseDto houseDto) {
-        iHouseService.createHouse(houseDto);
+
+    @PostMapping(value = "/create", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<ResponseDto> createAccount(
+            @RequestParam("files") MultipartFile[] files,
+            @RequestParam("houseDto") String houseDtoJson) {
+
+        // Désérialiser houseDtoJson en objet Java
+        ObjectMapper objectMapper = new ObjectMapper();
+        HouseRequest houseDto;
+        try {
+            houseDto = objectMapper.readValue(houseDtoJson, HouseRequest.class);
+        } catch (JsonProcessingException e) {
+            return ResponseEntity.badRequest().body(new ResponseDto(HouseConstants.STATUS_500, "Invalid JSON format for HouseDto")); // Meilleure gestion des erreurs        }
+        }
+        iHouseService.createHouse(files, houseDto);
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(new ResponseDto(HouseConstants.STATUS_201, HouseConstants.MESSAGE_201));

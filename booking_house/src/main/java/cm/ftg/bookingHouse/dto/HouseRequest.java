@@ -1,58 +1,47 @@
 package cm.ftg.bookingHouse.dto;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class HouseRequest {
+        @JsonProperty("reference")
+        private String reference;
 
-import java.util.List;
+        @JsonProperty("description")
+        private String description;
 
-public record HouseRequest(
-        @NotEmpty(message = "description can not be a null or empty")
-        @Schema(
-                description = "description  of house", example = "the house is newly built"
-        )
-        String description,
-        boolean available,
-        boolean category,
-        @NotNull(message = "price can not be a null or empty")
-        @Schema(
-                description = "Price of house",
-                example = "1587000"
-        )
-        double price,
-        @Schema(
-                description = "Localisation of house",
-                example = "description of house"
-        )
-        String Localisation,
-        @Schema(
-                description = "State  of house"
-        )
-        boolean state,
-        @NotEmpty(message = "mobileNumber can not be a null or empty")
-        @Schema(
-                description = "number to contact",  example = "1234567890"
-        )
-        String mobileNumber,
-        @NotNull(message = "length can not be a null or empty")
-        @Schema(
-                description = "length of house",  example = "2.15"
-        )
-        double length,
-        @NotNull(message = "length can not be a null or empty")
-        @Schema(
-                description = "length of house",  example = "2.15"
-        )
-        double width,
-        @NotNull(message = "Image can not be a null or empty")
-        @Schema(
-                description = "image of house",  example = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
-        )
-        String image,
-        @NotNull(message = "Type House can not be a null or empty")
-        @Schema(
-                description = "Type ofHouse",  example = "STUDIO"
-        )
-        String typeHouse
-) {
+        @JsonProperty("available")
+        private boolean available;
+
+        @JsonProperty("category")
+        private boolean category;
+
+        @JsonProperty("price")
+        private double price;
+
+        @JsonProperty("Localisation")
+        private String localisation; // JSON "Localisation" correspond ici
+
+        @JsonProperty("state")
+        private boolean state;
+
+        @JsonProperty("mobileNumber")
+        private String mobileNumber;
+
+        @JsonProperty("length")
+        private double length;
+
+        @JsonProperty("width")
+        private double width;
+
+        @JsonProperty("typeHouse")
+        private String typeHouse;
+
+        // Constructeur, getters et setters
 }

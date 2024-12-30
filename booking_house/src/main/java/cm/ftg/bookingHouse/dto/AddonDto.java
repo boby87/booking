@@ -4,13 +4,15 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.List;
+
 public record AddonDto (
-       @Schema(
+        @Schema(
                 description = "State  of house"
         )
         boolean state,
 
-       @NotEmpty(message = "Type can not be a null or empty")
+        @NotEmpty(message = "Type can not be a null or empty")
        @Schema(
                 description = "type addons for exemple Parking, bedroom", example = "BEDROOM"
         )
@@ -30,6 +32,6 @@ public record AddonDto (
         @Schema(
                  description = "image ", example = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
          )
-         String image
+        List<String> images
         ){
 }

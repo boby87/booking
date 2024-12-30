@@ -58,7 +58,7 @@ public record HouseDto(
         @Schema(
                 description = "image of house",  example = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
         )
-        String image,
+        List<String> images,
         @NotNull(message = "Type House can not be a null or empty")
         @Schema(
                 description = "Type ofHouse",  example = "STUDIO"

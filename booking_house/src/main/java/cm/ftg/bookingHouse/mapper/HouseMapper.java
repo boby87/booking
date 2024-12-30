@@ -21,7 +21,7 @@ public final class HouseMapper {
                 house.getMobileNumber(),
                 house.getLength(),
                 house.getWidth(),
-                house.getImage(),
+                house.getImages(),
                 house.getType().getDescription());
 
     }
@@ -36,8 +36,21 @@ public final class HouseMapper {
         house.setLength(houseRequest.length());
         house.setMobileNumber(houseRequest.mobileNumber());
         house.setWidth(houseRequest.width());
-        house.setImage(houseRequest.image());
         house.setType(TypeHouse.valueOf(houseRequest.typeHouse()));
+        return house;
+    }
+
+    public static House mapFromHouseRequestToHouseDto(HouseRequest houseRequest) {
+        House house = new House();
+        house.setAvailable(houseRequest.isAvailable());
+        house.setCategory(houseRequest.isCategory());
+        house.setDescription(houseRequest.getDescription());
+        house.setLocalisation(houseRequest.getLocalisation());
+        house.setPrice(houseRequest.getPrice());
+        house.setLength(houseRequest.getLength());
+        house.setMobileNumber(houseRequest.getMobileNumber());
+        house.setWidth(houseRequest.getWidth());
+        house.setType(TypeHouse.valueOf(houseRequest.getTypeHouse()));
         return house;
     }
 }

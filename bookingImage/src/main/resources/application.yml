@@ -3,7 +3,7 @@ file:
 server:
   port: 8082
   servlet:
-    contextPath: "/api/image"
+    contextPath: "/api"
 spring:
   cloud:
     discovery:
