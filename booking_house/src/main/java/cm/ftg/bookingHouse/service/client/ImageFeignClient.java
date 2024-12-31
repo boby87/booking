@@ -6,6 +6,7 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.apache.http.HttpStatus;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,12 +15,12 @@ import java.util.List;
 
 import static cm.ftg.bookingHouse.constants.HouseConstants.STATUS_500;
 
-@FeignClient(name = "bookingImage", configuration = FeignClientConfiguration.class)
+@FeignClient(name = "BOOKINGIMAGE", url = "http://localhost:8082/api")
 public interface ImageFeignClient {
 
     @CircuitBreaker(name = "bookingImage", fallbackMethod = "uploadImageFallback")
-    @PostMapping(value = "/uploads", consumes = "multipart/form-data")
-    ResponseEntity<ResponseDto> uploadImage(@RequestPart("files") MultipartFile[] files, @RequestPart("referencePattern") String referencePattern);
+    @PostMapping(value = "/images/uploads", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    ResponseEntity<ResponseDto> uploadImage(@RequestPart("files") MultipartFile[] files, @RequestParam("referencePattern") String referencePattern);
 
     @Retry(name = "retryGetImages", fallbackMethod = "getImagesFallback")
     @GetMapping("/{referencePattern}")

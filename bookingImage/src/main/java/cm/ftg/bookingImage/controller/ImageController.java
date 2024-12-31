@@ -39,8 +39,8 @@ public class ImageController {
         return ResponseEntity.ok(new ResponseDto(STATUS_201,MESSAGE_201));
     }
 
-    @PostMapping("/uploads")
-    public ResponseEntity<ResponseDto> uploadImages(@RequestPart("files") MultipartFile[] files, @RequestPart("referencePattern") String referencePattern) {
+    @PostMapping(value = "/uploads", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<ResponseDto> uploadImages(@RequestParam("files") MultipartFile[] files, @RequestParam("referencePattern") String referencePattern) {
         imageService.storeFile(files, referencePattern);
 
         return ResponseEntity.ok(new ResponseDto(STATUS_201,MESSAGE_201));

@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c6628a4-3f15-4a08-8a33-365f6ccde3ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/dto/ImageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/ImageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/FeignClientConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/constants/ImageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/constants/ImageConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/entity/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/entity/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/entity/UploadResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/service/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/service/impl/ImageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/controller/HouseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/HouseRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/HouseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/HouseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/IHouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/IHouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/FeignClientConfiguration.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/ImageFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/ImageFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,9 +170,14 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/ImageFeignClient.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
