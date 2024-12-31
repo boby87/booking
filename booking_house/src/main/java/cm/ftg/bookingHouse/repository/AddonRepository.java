@@ -7,12 +7,10 @@ import cm.ftg.bookingHouse.entity.House;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface AddonRepository extends JpaRepository<Addon, Long> {
 
-    Optional< Addon> findByReference(String reference);
-    void AddAddonToHouse(Addon addon, House mobileNumber);
-    void deleteAddonFromHouse(Addon addon, House house);
-    List<Addon> findAllAddonsByHouse(House house);
-    void updateAddonToHouse(Addon addon, House house);
+    Optional< Addon> findByReference(UUID reference);
+    List< Addon> findByHouse_Reference(UUID reference);
 }

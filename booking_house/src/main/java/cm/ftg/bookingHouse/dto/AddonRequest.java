@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
-public record AddonDto (
+public record AddonRequest(
         @Schema(
                 description = "State  of house"
         )
@@ -27,16 +27,6 @@ public record AddonDto (
         @Schema(
                 description = "length of house",  example = "2.15"
         )
-        double width,
-        @NotEmpty(message = "image can not be a null or empty")
-        @Schema(
-                 description = "image ", example = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
-         )
-        List<String> images,
-        @NotEmpty(message = "reference can not be a null or empty")
-        @Schema(
-                description = "reference ", example = "FGTSKKKEK"
-        )
-        String reference
+        double width
         ){
 }

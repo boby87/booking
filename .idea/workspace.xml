@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c6628a4-3f15-4a08-8a33-365f6ccde3ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/controller/AddonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/dto/AddonDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/mapper/AddonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/AddonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/AddonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/HouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/repository/HouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/AdonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/IAddonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/AdonImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/IAddonImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +71,7 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cm.ftg.bookingHouse.dto" />
+      <recent name="cm.ftg.bookingHouse.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Application.BookingImageApplication">
@@ -166,11 +174,6 @@
           <url>file://$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java</url>
           <line>38</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java</url>

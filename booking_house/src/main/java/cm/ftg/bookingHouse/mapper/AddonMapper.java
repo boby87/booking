@@ -9,7 +9,14 @@ import cm.ftg.bookingHouse.entity.Addon;
 public final class AddonMapper {
 
     public static AddonDto mapToAddonDto(Addon addon) {
-        return new AddonDto(addon.isState(), addon.getType().getDescription(), addon.getLength(), addon.getWidth(), addon.getImages());
+        return new AddonDto(
+                addon.isState(),
+                addon.getType().getDescription(),
+                addon.getLength(),
+                addon.getWidth(),
+                addon.getImages(),
+                addon.getReference().toString()
+        );
     }
 
     public static Addon mapToAddon(AddonDto addonDto) {
