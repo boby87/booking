@@ -5,6 +5,7 @@ import cm.ftg.bookingHouse.dto.ImageResponse;
 import cm.ftg.bookingHouse.service.client.ImageFeignClient;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,12 +54,21 @@ public class HouseServiceImpl implements IHouseService {
 
     @Override
     public List<HouseDto> findAll() {
-        return houseRepository.findAll().stream().map(house -> {
-            List<String> images = Objects.requireNonNull(imageFeignClient.getImages(house.getReference().toString()).getBody()).stream().map(ImageResponse::url).toList();
-            house.setImages(images);
+        return houseRepository.findAll().parallelStream().map(house -> {
+            try {
+                List<String> images = Objects.requireNonNull(imageFeignClient.getImages(house.getReference().toString()).getBody())
+                        .stream()
+                        .map(ImageResponse::url)
+                        .toList();
+                house.setImages(images);
+            } catch (Exception e) {
+                // Gérer les exceptions et, par exemple, continuer sans images
+                house.setImages(Collections.emptyList());
+            }
             return HouseMapper.mapToHouseDto(house);
         }).toList();
     }
+
 
     @Override
     public void deleteByMobileNumber(String mobileNumber) {

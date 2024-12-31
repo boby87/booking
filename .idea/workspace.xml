@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c6628a4-3f15-4a08-8a33-365f6ccde3ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/FeignClientConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/ImageFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/client/ImageFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <recent name="cm.ftg.bookingHouse.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BookingHouseApplication">
+  <component name="RunManager" selected="Application.BookingImageApplication">
     <configuration name="BookingGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cm.ftg.bookingGateway.BookingGatewayApplication" />
       <module name="bookingGateway" />
@@ -123,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BookingHouseApplication" />
         <item itemvalue="Application.BookingImageApplication" />
+        <item itemvalue="Application.BookingHouseApplication" />
         <item itemvalue="Application.BookingGatewayApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
       </list>
@@ -171,13 +169,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java</url>
           <line>43</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/booking_house/src/main/java/cm/ftg/bookingHouse/service/impl/HouseServiceImpl.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bookingImage/src/main/java/cm/ftg/bookingImage/controller/ImageController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
