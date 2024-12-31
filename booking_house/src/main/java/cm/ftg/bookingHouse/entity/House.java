@@ -1,11 +1,10 @@
 package cm.ftg.bookingHouse.entity;
 
-import java.util.List;
-
-import cm.ftg.bookingHouse.converter.AddonTypeConverter;
 import cm.ftg.bookingHouse.converter.TypeHouseConverter;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 
 @Entity
@@ -19,7 +18,7 @@ public class House extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
-    private   String description; 
+    private   String description;
     private  boolean available;
     private boolean category;
     private double price;

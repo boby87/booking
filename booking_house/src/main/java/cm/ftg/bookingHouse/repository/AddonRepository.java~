@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface AddonRepository extends JpaRepository<Addon, Long> {
 
     Optional< Addon> findByReference(String reference);
-    void AddAddonToHouse(Addon addon, House mobileNumber);
+    void AddAddonToHouse(Addon addon, House house);
     void deleteAddonFromHouse(Addon addon, House house);
     List<Addon> findAllAddonsByHouse(House house);
     void updateAddonToHouse(Addon addon, House house);

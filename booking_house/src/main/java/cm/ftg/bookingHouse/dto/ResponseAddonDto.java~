@@ -1,0 +1,4 @@
+package cm.ftg.bookingHouse.dto;
+
+public record ResponseAddonDto() {
+}
