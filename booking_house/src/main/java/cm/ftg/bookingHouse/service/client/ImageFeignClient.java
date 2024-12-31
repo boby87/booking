@@ -15,11 +15,11 @@ import java.util.List;
 
 import static cm.ftg.bookingHouse.constants.HouseConstants.STATUS_500;
 
-@FeignClient(name = "BOOKINGIMAGE", url = "http://localhost:8082/api")
+@FeignClient(name = "BOOKINGIMAGE", url = "http://localhost:8082/api/images")
 public interface ImageFeignClient {
 
     @CircuitBreaker(name = "bookingImage", fallbackMethod = "uploadImageFallback")
-    @PostMapping(value = "/images/uploads", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/uploads", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     ResponseEntity<ResponseDto> uploadImage(@RequestPart("files") MultipartFile[] files, @RequestParam("referencePattern") String referencePattern);
 
     @Retry(name = "retryGetImages", fallbackMethod = "getImagesFallback")
