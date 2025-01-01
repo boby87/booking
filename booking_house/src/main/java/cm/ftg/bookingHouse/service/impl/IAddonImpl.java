@@ -39,12 +39,10 @@ public class IAddonImpl implements IAddonService {
     @Override
     public void createAddon(MultipartFile[] files, AddonRequest addonRequest, String referenceHouse) {
 
-        Addon addon = new Addon();
-        BeanUtils.copyProperties(addonRequest, addon);
-        addon.setReference(UUID.randomUUID());
-        Addon addon1 = addonRepository.save(addon);
-        houseRepository.findByReference(UUID.fromString(referenceHouse)).ifPresent(house -> addon1.setHouse(house));
-        imageFeignClient.uploadImage(files, addon1.getReference().toString());
+
+        Addon addon = addonRepository.save(AddonMapper.mapFromRequestToAddon(addonRequest));
+        houseRepository.findByReference(UUID.fromString(referenceHouse)).ifPresent(addon::setHouse);
+        imageFeignClient.uploadImage(files, addon.getReference().toString());
 
     }
 

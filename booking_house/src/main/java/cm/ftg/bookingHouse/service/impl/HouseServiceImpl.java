@@ -61,6 +61,9 @@ public class HouseServiceImpl implements IHouseService {
                         .map(ImageResponse::url)
                         .toList();
                 house.setImages(images);
+                for (Addon addon : house.getAddons()) {
+                    addon.setImages(imageFeignClient.getImages(addon.getReference().toString()).getBody().stream().map(ImageResponse::url).toList());
+                }
             } catch (Exception e) {
                 // Gérer les exceptions et, par exemple, continuer sans images
                 house.setImages(Collections.emptyList());
