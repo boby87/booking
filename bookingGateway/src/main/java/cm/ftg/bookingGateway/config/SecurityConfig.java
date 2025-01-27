@@ -20,8 +20,10 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity serverHttpSecurity) {
-        serverHttpSecurity.authorizeExchange(exchanges -> exchanges.pathMatchers(HttpMethod.GET).permitAll()
+        serverHttpSecurity.authorizeExchange(exchanges -> exchanges
+                        .pathMatchers(HttpMethod.GET).permitAll()
                         .pathMatchers("/bookingimage/api/**").hasRole("ADMIN")
+                        .pathMatchers("/authserver/api/**").permitAll()
                         .pathMatchers("/bookinghouse/api/**").hasRole("ADMIN"))
                 .oauth2ResourceServer(oAuth2ResourceServerSpec -> oAuth2ResourceServerSpec
                         .jwt(jwtSpec -> jwtSpec.jwtAuthenticationConverter(grantedAuthoritiesExtractor())));
