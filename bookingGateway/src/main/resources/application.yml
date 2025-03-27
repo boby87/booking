@@ -11,6 +11,14 @@ spring:
         connect-timeout: 1000
         response-timeout: 2s
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: "http://localhost:8080/realms/booking-house-app/protocol/openid-connect/certs"
+         # issuer-uri: "http://localhost:8080/realms/booking-house-app"
+
+
 server:
   port: 8083
 
