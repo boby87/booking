@@ -46,3 +46,17 @@ resilience4j:
     instances:
       bookingImage:
         register-health-indicator: true
+
+langchain4j:
+  google:
+    api-key: "${GOOGLE_API_KEY}"  # Remplacez par votre clé API Google
+    model-name: "gemini-1.5-flash"
+
+logging:
+  level:
+    dev:
+      langchain4j: DEBUG
+      ai4j:
+        openai4j: DEBUG
+    ai:
+      djl: OFF
